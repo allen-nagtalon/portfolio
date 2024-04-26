@@ -17,10 +17,10 @@ const scrollToTop = (event) => {
 
 const Logo = _ => {
   return (
-    <Box sx={{ pl: 10, width: '50%'}}>
-      <Box onClick={scrollToTop} display='block' sx={{ width: '40%' }}>
-        <Typography sx={{ textAlign: 'center' }}>ALLEN ANTHONY</Typography>
-        <Typography sx={{ textAlign: 'center' }}>NAGTALON</Typography>
+    <Box>
+      <Box onClick={scrollToTop}>
+        <Typography display='block' variant='logo' sx={{ textAlign: 'center', pb: 1 }}>ALLEN ANTHONY</Typography>
+        <Typography display='block' variant='logo' sx={{ textAlign: 'center' }}>NAGTALON</Typography>
       </Box>
     </Box> 
   )
@@ -28,14 +28,11 @@ const Logo = _ => {
 
 const NavBar = _ => {
   return (
-    <AppBar 
-      component='nav'
-      color='melon'
-    >
+    <AppBar component='nav' color='melon' elevation={0} sx={{ paddingLeft: 5 }}>
       <Toolbar>
-        <Box display='flex' alignItems='center' sx={{height: 120, width: '100%' }}>
+        <Box display='flex' alignItems='center' justifyContent='space-between' sx={{ height: 120, width: '100%' }}>
           <Logo />
-          <Box display='flex' justifyContent='right' sx={{ width: '50%'}}>
+          <Box display='flex'>
             {navItems.map((page) => (
               <Typography 
                 component={Button} 

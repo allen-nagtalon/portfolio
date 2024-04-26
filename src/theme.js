@@ -4,6 +4,7 @@ const theme = createTheme({
   palette: {
     melon: {
       main: '#EAD1C7',
+      light: '#EED9D1',
       dark: '#E3B6A9'
     },
     silver: {
@@ -14,6 +15,9 @@ const theme = createTheme({
     dark: {
       main: '#463F3A',
       dark: '#000000'
+    },
+    white: {
+      main: '#FFFFFF'
     }
   },
   typography: {
@@ -28,9 +32,24 @@ const theme = createTheme({
       letterSpacing: 2,
       fontWeight: 300
     },
+    body2: {
+      fontSize: 15,
+      letterSpacing: 2,
+      fontWeight: 300
+    },
     logo: {
-      fontSize: 16,
+      fontSize: 17,
+      letterSpacing: 5,
+      fontWeight: 300
+    },
+    tiny: {
+      fontSize: 13,
       letterSpacing: 3,
+      fontWeight: 300
+    },
+    sideText: {
+      fontSize: 30,
+      letterSpacing: 10,
       fontWeight: 300
     }
   }
