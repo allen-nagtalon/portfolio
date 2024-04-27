@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material"
 
-export function SectionOne() {
+export function GeneralSection() {
   return (
     <Box sx={{ height: '825px', px: '10vw', py: '150px', zIndex: 0}}>
       <Box 
@@ -71,39 +71,6 @@ export function SectionOne() {
           </Box>
         </Box>
       </Box>
-    </Box>
-  )
-}
-
-export function SectionTwo() {
-  return (
-    <Box sx={{
-      display: 'flex',
-      height: '1000px',
-      width: '100vw'
-    }}>
-      <Box sx={{ width: '50%' }}>
-        
-      </Box>
-      <Box sx={{
-        bgcolor: 'melon.dark',
-        width: '50%'
-      }}>
-        
-      </Box>
-    </Box>
-  )
-}
-
-export function SectionThree() {
-  return (
-    <Box
-      bgcolor='melon.light' 
-      sx={{
-        height: '1000px',
-        my: '150px'
-    }}>
-
     </Box>
   )
 }
