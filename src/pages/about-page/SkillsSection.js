@@ -1,21 +1,31 @@
-import { Box } from "@mui/material"
+import { Box, Typography } from "@mui/material"
+import IconDrawer from "../../components/icon-drawer/IconDrawer"
+
+const skills = [
+  { title: 'Java', icon: '/imgs/icons/java.png'},
+  { title: 'Python', icon: '/imgs/icons/python.png'},
+  { title: 'Kotlin', icon: '/imgs/icons/kotlin.png'},
+  { title: 'HTML', icon: '/imgs/icons/html.png'},
+  { title: 'CSS', icon: '/imgs/icons/css.png'},
+  { title: 'Javascript', icon: '/imgs/icons/javascript.png'},
+  { title: 'SQL', icon: ''},
+  { title: 'MongoDB', icon: '/imgs/icons/mongodb.png'},
+  { title: 'React', icon: '/imgs/icons/react.png'},
+  { title: 'Django', icon: '/imgs/icons/django.png'},
+  { title: 'Spring', icon: '/imgs/icons/spring.png'},
+  { title: 'Node', icon: '/imgs/icons/node.png'},
+  { title: 'Express', icon: '/imgs/icons/express.png'},
+]
 
 export function SkillsSection() {
   return (
-    <Box sx={{
-      display: 'flex',
-      height: '1000px',
-      width: '100vw'
+    <Box
+      bgcolor='melon.light' 
+      sx={{
+        height: '1000px',
+        my: '150px'
     }}>
-      <Box sx={{ width: '50%' }}>
-        
-      </Box>
-      <Box sx={{
-        bgcolor: 'melon.dark',
-        width: '50%'
-      }}>
-        
-      </Box>
+      <IconDrawer skills={skills} />
     </Box>
   )
 }

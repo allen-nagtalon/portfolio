@@ -11,8 +11,8 @@ const AboutPage = _ => {
       <NavBar />
       <Box sx={{ height: 120 }}/>
       <GeneralSection />
-      <SkillsSection />
       <ExperienceSection />
+      <SkillsSection />
       <Footer />
       <Typography
         variant='sideText'
