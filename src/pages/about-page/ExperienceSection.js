@@ -1,4 +1,41 @@
-import { Box, Typography } from "@mui/material"
+import { Box, styled, Typography } from "@mui/material"
+
+const education = [
+  { title: 'Bachelor of Computer Science', location: 'California Polytechnic State University, Pomona' }
+]
+
+const work = [
+  { title: 'Associate QA Engineer', location: 'Liferay Inc.' },
+  { title: 'QA Tester', location: 'Liferay Inc.' },  
+]
+
+const certifications = [
+  { title: 'Response Web Design', location: 'freeCodeCamp' },
+  { title: 'Back End Development and API\'s', location: 'freeCodeCamp' }
+]
+
+const CategoryTitle = styled(Typography)(({theme}) => ({
+  paddingTop: 50,
+  marginBottom: 10,
+  fontWeight: 600,
+  letterSpacing: 4
+}))
+
+const ExperienceItem = (exp) => {
+  return (
+    <Box 
+      component={Typography}
+      variant='body2'
+      sx={{
+        py: 1,
+        '&:hover': {
+          fontWeight: 500
+        }
+    }}>
+      {exp.title}<br />{exp.location}
+    </Box>
+  )
+}
 
 export function ExperienceSection() {
   return (
@@ -12,21 +49,43 @@ export function ExperienceSection() {
       }}>
         
       </Box>
-      <Box sx={{
-        bgcolor: 'melon.dark',
-        width: '40vw',
-        pr: '10vw'
+      <Box
+        display='flex'
+        alignItems='center'
+        textAlign='end'
+        sx={{
+          bgcolor: 'melon.dark',
+          width: '40vw',
+          pr: '10vw'
       }}>
-        <Typography variant='body1'>Eductation</Typography>
-        <Typography variant='body2'>Bachelor of Computer Science<br/>California Polytechnic State University, Pomona</Typography>
+        <Box sx={{ width: '100%' }}>
+          <CategoryTitle>Eductation</CategoryTitle>
+          <Box>
+            {
+              education.map((edu) => (
+                <ExperienceItem {...edu} />
+              ))
+            }
+          </Box>
+          
+          <CategoryTitle>Work Experience</CategoryTitle>
+          <Box>
+            {
+              work.map((work) => (
+                <ExperienceItem {...work} />
+              ))
+            }
+          </Box>
 
-        <Typography variant='body1'>Work Experience</Typography>
-        <Typography variant='body2'>Associate QA Engineer - Liferay (7/23 - 12/23)</Typography>
-        <Typography variant='body2'>QA Tester - Liferay (1/23 - 7/23)</Typography>
-
-        <Typography variant='body1'>Certifications</Typography>
-        <Typography>Associate QA Engineer - Liferay (07/23 - 12/23)</Typography>
-        <Typography>Associate QA Engineer - Liferay (07/23 - 12/23)</Typography>
+          <CategoryTitle>Certifications</CategoryTitle>
+          <Box>
+            {
+              certifications.map((cert) => (
+                <ExperienceItem {...cert} />
+              ))
+            }
+          </Box>
+        </Box>
       </Box>
     </Box>
   )
