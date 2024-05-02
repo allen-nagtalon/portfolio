@@ -8,11 +8,11 @@ const skills = [
   { title: 'HTML', icon: '/imgs/icons/html.png'},
   { title: 'CSS', icon: '/imgs/icons/css.png'},
   { title: 'Javascript', icon: '/imgs/icons/javascript.png'},
-  { title: 'SQL', icon: ''},
+  { title: 'SQL', icon: '/imgs/icons/sql.png'},
   { title: 'MongoDB', icon: '/imgs/icons/mongodb.png'},
   { title: 'React', icon: '/imgs/icons/react.png'},
   { title: 'Django', icon: '/imgs/icons/django.png'},
-  { title: 'Spring', icon: '/imgs/icons/spring.png'},
+  { title: 'Spring', icon: '/imgs/icons/spring-boot.png'},
   { title: 'Node', icon: '/imgs/icons/node.png'},
   { title: 'Express', icon: '/imgs/icons/express.png'},
 ]
