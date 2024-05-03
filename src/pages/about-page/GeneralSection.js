@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material"
+import { Box, Fade, Slide, Typography } from "@mui/material"
 
 export function GeneralSection() {
   return (
@@ -28,27 +28,20 @@ export function GeneralSection() {
               pl: 10,
               pr: 7,
               zIndex: 2
-          }}>
-            <Typography variant='body1' sx={{ zIndex: 4 }}>
-              <p>Hello,<br/>My name is Allen!</p>
-            </Typography>
-            <Typography variant='body2' color='silver.dark' zIndex='4'>
-              <p>I'm a Bachelor of Computer Science, graduated from Cal Poly Pomona.</p>
-              <p>My areas of interest include back-end development, machine learning, and general problem solving.</p>
-              <p>With a detail oriented-focus, I enjoy creating simple but effective solutions to improve application performance, ease of maintenance, and user experience.</p>
-            </Typography>
-          </Box>
-          <Box
-            component='img'
-            src='/imgs/side-profile.jpg'
-            alt='Side-profile of Allen'
-            sx={{
-              position: 'absolute',
-              top: 80,
-              right: 0,
-              height: 600,
-              zIndex: 3
-          }} />
+          }}/>
+          <Slide direction='left' in={true} timeout={1600}>
+            <Box
+              component='img'
+              src='/imgs/side-profile.jpg'
+              alt='Side-profile of Allen'
+              sx={{
+                position: 'absolute',
+                top: 80,
+                right: 0,
+                height: 600,
+                zIndex: 3
+            }} />
+          </Slide>
           <Box
             sx={{
               position: 'absolute',
@@ -60,14 +53,18 @@ export function GeneralSection() {
               pr: 7,
               zIndex: 4
           }}>
-           <Typography variant='body1'>
-              <p>Hello,<br/>My name is Allen!</p>
-            </Typography>
-            <Typography variant='body2' color='silver.dark'>
-              <p>I'm a Bachelor of Computer Science, graduated from Cal Poly Pomona.</p>
-              <p>My areas of interest include back-end development, machine learning, and general problem solving.</p>
-              <p>With a detail oriented-focus, I enjoy creating simple but effective solutions to improve application performance, ease of maintenance, and user experience.</p>
-            </Typography>
+            <Slide direction='up' in={true} timeout={1000}>
+              <Typography variant='body1'>
+                <p>Hello,<br/>My name is Allen!</p>
+              </Typography>
+            </Slide>
+            <Slide direction='up' in={true} timeout={1200}>
+              <Typography variant='body2' color='silver.dark'>
+                <p>I'm a Bachelor of Computer Science, graduated from Cal Poly Pomona.</p>
+                <p>My areas of interest include back-end development, machine learning, and general problem solving.</p>
+                <p>With a detail oriented-focus, I enjoy creating simple but effective solutions to improve application performance, ease of maintenance, and user experience.</p>
+              </Typography>
+            </Slide>
           </Box>
         </Box>
       </Box>
