@@ -1,6 +1,6 @@
 import { Box, Fade, Slide, Typography } from "@mui/material"
 
-export function GeneralSection() {
+export function AboutSection() {
   return (
     <Box sx={{ height: '825px', px: '10vw', py: '150px', zIndex: 0}}>
       <Box 
