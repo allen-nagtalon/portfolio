@@ -48,14 +48,27 @@ const theme = createTheme({
       fontWeight: 300
     },
     tiny: {
-      fontSize: 13,
-      letterSpacing: 3,
+      fontSize: 14,
+      letterSpacing: 2,
       fontWeight: 300
     },
     sideText: {
       fontSize: 30,
       letterSpacing: 10,
       fontWeight: 300
+    },
+    active: {
+      fontSize: 16,
+      letterSpacing: 2,
+      fontWeight: 'bold'
+    },
+    inactive: {
+      fontSize: 15,
+      letterSpacing: 2,
+      fontWeight: 300,
+      '&:hover': {
+        fontWeight: 'bold'
+      }
     }
   }
 })
