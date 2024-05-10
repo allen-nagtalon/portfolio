@@ -129,8 +129,7 @@ const experience = {
           Bachelor's Degree, Computer Science
         </Typography>
         <Typography variant='body2'>
-          California Polytechnic State University, Pomona • 9/2014 - 6/2018<br/>
-          GPA: 3.65
+          California Polytechnic State University, Pomona • 9/2014 - 6/2018
         </Typography>
         <Box sx={{ py: 2 }}>
           <Typography variant='tiny'>
