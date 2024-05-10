@@ -1,6 +1,6 @@
 import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material"
 
-const navItems = ['About', 'Projects', 'Contact']
+const navItems = ['About', 'Experience', 'Projects', 'Contact']
 
 const scrollToTop = (event) => {
   console.log('Logo clicked!')
@@ -41,7 +41,7 @@ const NavBar = _ => {
                 color='dark.main'
                 sx={{
                   height: 60,
-                  width: 200,
+                  width: 180,
                   textTransform: 'none',
                   borderTop: 1,
                   borderRadius: 0,
