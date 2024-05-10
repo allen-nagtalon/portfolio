@@ -1,4 +1,4 @@
-import Hero from './components/hero/Hero'
+import Hero from './pages/hero-page/Hero'
 import MainPage from './pages/main-page/MainPage'
 
 import { ThemeProvider } from '@mui/material/styles'
