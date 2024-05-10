@@ -23,42 +23,42 @@ const theme = createTheme({
   typography: {
     fontFamily: 'Open Sans',
     h1: {
-      fontSize: 50,
+      fontSize: '2.5rem',
       letterSpacing: 3,
       fontWeight: 600
     },
     h2: {
-      fontSize: 20,
+      fontSize: '1.4rem',
       letterSpacing: 4,
       fontWeight: 500
     },
     body1: {
-      fontSize: 20,
+      fontSize: '1.3rem',
       letterSpacing: 2,
       fontWeight: 300
     },
     body2: {
-      fontSize: 15,
+      fontSize: '0.9rem',
       letterSpacing: 2,
       fontWeight: 300
     },
     logo: {
-      fontSize: 17,
+      fontSize: '1.1rem',
       letterSpacing: 5,
       fontWeight: 300
     },
     tiny: {
-      fontSize: 14,
+      fontSize: '0.8rem',
       letterSpacing: 2,
       fontWeight: 300
     },
     active: {
-      fontSize: 16,
+      fontSize: '1.0rem',
       letterSpacing: 2,
       fontWeight: 'bold'
     },
     inactive: {
-      fontSize: 15,
+      fontSize: '0.9rem',
       letterSpacing: 2,
       fontWeight: 300,
       '&:hover': {
