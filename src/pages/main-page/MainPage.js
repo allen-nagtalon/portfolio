@@ -1,11 +1,11 @@
-import NavBar from "../../components/navbar/NavBar"
-import Footer from "../../components/footer/Footer"
+import NavBar from "../../components/navbar/NavBar.js"
+import Footer from "../../components/footer/Footer.js"
 import { Box, Typography } from "@mui/material"
 import { GeneralSection } from "./GeneralSection.js"
 import { SkillsSection } from "./SkillsSection.js"
 import { ExperienceSection } from "./ExperienceSection.js"
 
-const AboutPage = _ => {
+const MainPage = _ => {
   return (
     <>
       <NavBar />
@@ -18,4 +18,4 @@ const AboutPage = _ => {
   )
 }
 
-export default AboutPage
+export default MainPage

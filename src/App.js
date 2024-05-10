@@ -1,5 +1,5 @@
 import Hero from './components/hero/Hero'
-import AboutPage from './pages/about-page/AboutPage'
+import MainPage from './pages/main-page/MainPage'
 
 import { ThemeProvider } from '@mui/material/styles'
 import theme from './theme'
@@ -7,7 +7,7 @@ import theme from './theme'
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <AboutPage />
+      <MainPage />
     </ThemeProvider>
   );
 }
