@@ -52,11 +52,6 @@ const theme = createTheme({
       letterSpacing: 2,
       fontWeight: 300
     },
-    sideText: {
-      fontSize: 30,
-      letterSpacing: 10,
-      fontWeight: 300
-    },
     active: {
       fontSize: 16,
       letterSpacing: 2,

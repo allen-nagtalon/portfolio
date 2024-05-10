@@ -14,16 +14,6 @@ const AboutPage = _ => {
       <ExperienceSection />
       <SkillsSection />
       <Footer />
-      <Typography
-        variant='sideText'
-        sx={{
-          rotate: '270deg',
-          position: 'fixed',
-          left: '0',
-          top: '30vh'
-      }}>
-        Who Am I?
-      </Typography>
     </>
   )
 }
