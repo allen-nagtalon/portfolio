@@ -27,7 +27,7 @@ const Hero = _ => {
             top: '150px',
             height: '300px',
             width: '50vw',
-            bgcolor: 'silver.main'
+            bgcolor: 'melon.main'
         }}/>
       </Slide>
       <Fade in={true} {...{ timeout: animTimeout }}>     
