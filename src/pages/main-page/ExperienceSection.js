@@ -180,7 +180,7 @@ const experience = {
           </Typography>
         </Box>
         <Box sx={{ pb: 2 }}>
-          <Typography variant='tiny'>
+          <Typography variant='tiny' fontStyle='italic'>
             HTML5 • CSS • Flexbox • SASS
           </Typography>
         </Box>
