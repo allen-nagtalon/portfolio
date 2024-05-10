@@ -60,9 +60,10 @@ export function GeneralSection() {
             </Slide>
             <Slide direction='up' in={true} timeout={1200}>
               <Typography variant='body2' color='silver.dark'>
-                <p>I'm a Bachelor of Computer Science, graduated from Cal Poly Pomona.</p>
+                <p>I am a Software Engineer!</p>
                 <p>My areas of interest include back-end development, machine learning, and general problem solving.</p>
                 <p>With a detail oriented-focus, I enjoy creating simple but effective solutions to improve application performance, ease of maintenance, and user experience.</p>
+                <p>Be it through work experience, curriculum, or self-lessons, I always strive to gain and build upon skills in my repertoire.</p>
               </Typography>
             </Slide>
           </Box>
