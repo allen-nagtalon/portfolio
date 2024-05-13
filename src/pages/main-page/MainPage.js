@@ -4,6 +4,7 @@ import { Box, Typography } from "@mui/material"
 import { AboutSection } from "./AboutSection.js"
 import { ProjectsSection } from "./ProjectsSection.js"
 import { ExperienceSection } from "./ExperienceSection.js"
+import { ContactSection } from "./ContactSection.js"
 
 const MainPage = _ => {
   return (
@@ -13,6 +14,7 @@ const MainPage = _ => {
       <AboutSection />
       <ExperienceSection />
       <ProjectsSection />
+      <ContactSection />
       <Footer />
     </>
   )
