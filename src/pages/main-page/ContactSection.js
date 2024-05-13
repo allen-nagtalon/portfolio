@@ -5,7 +5,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export function ContactSection() {
   return (
-    <Box id='contact-section' sx={{ height: '400px', px: '10vw' }}>
+    <Box id='contact-section' sx={{ height: 'auto', px: '10vw', py: '150px' }}>
       <Typography variant='h1' sx={{ pb: 1 }}>
         Let's get in touch!
       </Typography>

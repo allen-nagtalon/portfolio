@@ -52,7 +52,7 @@ export function ProjectsSection() {
       bgcolor='silver.light'
       sx={{
         height: '650px',
-        my: '150px',
+        mt: '150px',
         px: '5vw',
         py: '150px'
     }}>
