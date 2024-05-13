@@ -2,7 +2,7 @@ import NavBar from "../../components/navbar/NavBar.js"
 import Footer from "../../components/footer/Footer.js"
 import { Box, Typography } from "@mui/material"
 import { AboutSection } from "./AboutSection.js"
-import { SkillsSection } from "./SkillsSection.js"
+import { ProjectsSection } from "./ProjectsSection.js"
 import { ExperienceSection } from "./ExperienceSection.js"
 
 const MainPage = _ => {
@@ -12,7 +12,7 @@ const MainPage = _ => {
       <Box sx={{ height: 120 }}/>
       <AboutSection />
       <ExperienceSection />
-      <SkillsSection />
+      <ProjectsSection />
       <Footer />
     </>
   )
