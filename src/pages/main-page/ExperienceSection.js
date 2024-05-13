@@ -241,7 +241,7 @@ const ExperienceSnippet = (props) => {
       <Slide direction='right' in={props.active} timeout={1000} unmountOnExit>
         <Box 
           component='img'
-          src={ '/imgs/' + props.exp.image }
+          src={ '/imgs/experiences/' + props.exp.image }
           sx={{
             width: '40vw',
             height: '200px',
@@ -262,9 +262,11 @@ export function ExperienceSection() {
   const [activeSection, setActiveSection] = useState(1)
 
   return (
-    <Box sx={{
-      display: 'flex',
-      height: '1000px'
+    <Box
+      id='experience-section'
+      sx={{
+        display: 'flex',
+        height: '1000px'
     }}>
       <Box sx={{
         width: '50vw',
