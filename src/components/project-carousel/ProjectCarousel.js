@@ -94,7 +94,13 @@ const ProjectCard = (props) => {
 
 const ProjectCarousel = (props) => {
   return (
-    <Carousel indicators={false} navButtonsAlwaysVisible={true} autoPlay={false} duration={1000}>
+    <Carousel
+      indicators={false}
+      navButtonsAlwaysVisible={true}
+      autoPlay={true}
+      stopAutoPlayOnHover={true}
+      duration={2000}
+    >
       {
         props.projects.map( (project, i) => <ProjectCard project={project} key={i} /> )
       }

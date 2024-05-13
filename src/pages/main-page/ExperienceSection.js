@@ -238,7 +238,7 @@ const ExperienceSnippet = (props) => {
         left: '5vw',
         top: '150px'
     }}>
-      <Slide direction='right' in={props.active} timeout={1000} unmountOnExit>
+      <Slide direction='right' in={props.active} timeout={2000} unmountOnExit>
         <Box 
           component='img'
           src={ '/imgs/experiences/' + props.exp.image }
@@ -249,7 +249,7 @@ const ExperienceSnippet = (props) => {
             pb: 3
         }}/>
       </Slide>
-      <Slide direction='right' in={props.active} timeout={1300} appear={true} unmountOnExit>
+      <Slide direction='right' in={props.active} timeout={1800} appear={true} unmountOnExit>
         <Box sx={{ pl: '5vw', '& *': { width: '75%' }}}>        
           { props.exp.snippet ? props.exp.snippet : '' }
         </Box>
