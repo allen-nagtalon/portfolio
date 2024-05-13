@@ -59,11 +59,6 @@ const ProjectCard = (props) => {
         <Typography variant='body2' sx={{ pb: 2 }}>
           {props.project.description}
         </Typography>
-        <Box sx={{ pb: 2 }}>
-          <Typography variant='tiny'>
-            {props.project.snippet}
-          </Typography>
-        </Box>
         <Box sx={{ pb: 3 }}>
           <Typography variant='tiny' fontStyle='italic'>
             {props.project.tech.join(' • ')}
@@ -115,6 +110,30 @@ const ProjectCarousel = (props) => {
       image: 'ffxiv_triple_triad.png',
       tech: [ 'Python', 'Javascript', 'HTML', 'CSS', 'Django', 'React', 'JWT', 'Axios', 'Material-UI' ],
       github: 'https://github.com/allen-nagtalon/triadtracker'
+    },
+    {
+      name: 'Flappy Bird Clone w/ NEAT Neural Network',
+      description: 'A Python recreation of the mobile game Flappy Bird with an implementation of a NEAT Neural Network to play the game.',
+      snippet: '',
+      image: 'neat_flappy.png',
+      tech: [ 'Python', 'PyGame', 'NEAT Neural Network' ],
+      github: 'https://github.com/allen-nagtalon/neat_flappy'
+    },
+    {
+      name: 'Sudoku Solver Mobile App',
+      description: 'A simple Android mobile application to read Sudoku puzzles using AR that can either be played out or solved.',
+      snippet: '',
+      image: 'sudoku_solver.jpg',
+      tech: [ 'Java', 'Kotlin', 'Android Studio', 'CameraX API', 'Google MLK', 'Gradle' ],
+      github: 'https://github.com/anthony-nagtalon/SudokuWizardApp'
+    },
+    {
+      name: 'Top-View RPG Game',
+      description: 'A top-view 2D game developed in Python using Pygame to learn the basic and intermediate features of the modules. Created following the online course for Pygame development via Clear Code.',
+      snippet: '',
+      image: 'top_view_rpg.png',
+      tech: [ 'Python', 'PyGame', 'Tiled' ],
+      github: 'https://github.com/anthony-nagtalon/zelda_like_game'
     },
   ]
 
