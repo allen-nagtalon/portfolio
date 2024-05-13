@@ -48,6 +48,7 @@ export function ProjectsSection() {
 
   return (
     <Box
+      id='projects-section'
       bgcolor='silver.light'
       sx={{
         height: '650px',

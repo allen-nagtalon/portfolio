@@ -35,7 +35,8 @@ const NavBar = _ => {
           <Box display='flex'>
             {navItems.map((page) => (
               <Typography 
-                component={Button} 
+                component={Button}
+                href={ '#' + page.toLowerCase() + '-section' }
                 variant='body2'
                 disableRipple
                 color='dark.main'
