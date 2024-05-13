@@ -225,7 +225,6 @@ const experience = {
 }
 
 const CategoryTitle = styled(Typography)(({theme}) => ({
-  paddingTop: 50,
   marginBottom: 10,
   fontWeight: 600,
   letterSpacing: 4
@@ -251,7 +250,7 @@ const ExperienceSnippet = (props) => {
         }}/>
       </Slide>
       <Slide direction='right' in={props.active} timeout={1300} appear={true} unmountOnExit>
-        <Box sx={{ pl: '3vw', '& *': { width: '80%' }}}>        
+        <Box sx={{ pl: '5vw', '& *': { width: '75%' }}}>        
           { props.exp.snippet ? props.exp.snippet : '' }
         </Box>
       </Slide>
@@ -281,50 +280,61 @@ export function ExperienceSection() {
         textAlign='end'
         sx={{
           bgcolor: 'melon.dark',
-          width: '35%',
-          pl: '5%',
-          pr: '10%'
+          width: '50vw'
       }}>
-        <Box sx={{ width: '100%' }}>
-          <CategoryTitle>Work Experience</CategoryTitle>
-          {
-            experience.work.map((work) => (
-              <Box sx={{ py: 1 }}>
-                <Typography
-                  variant={ (activeSection === work.key ? 'active' : 'inactive') }
-                  onMouseOver={() => setActiveSection(work.key)}
-                >
-                 {work.title}<br />{work.location}
-                </Typography>
-              </Box>
-            ))
-          }
-          <CategoryTitle>Eductation</CategoryTitle>
-          {
-            experience.education.map((edu) => (
-              <Box sx={{ py: 1 }}>
-                <Typography
-                  variant={ (activeSection === edu.key ? 'active' : 'inactive') }
-                  onMouseOver={() => setActiveSection(edu.key)}
-                >
-                 {edu.title}<br />{edu.location}
-                </Typography>
-              </Box>
-            ))
-          }
-          <CategoryTitle>Certifications</CategoryTitle>
-          {
-            experience.certifications.map((cert) => (
-              <Box sx={{ py: 1 }}>
-                <Typography
-                  variant={ (activeSection === cert.key ? 'active' : 'inactive') }
-                  onMouseOver={() => setActiveSection(cert.key)}
-                >
-                 {cert.title}<br />{cert.location}
-                </Typography>
-              </Box>
-            ))
-          }
+        <Box 
+          sx={{
+            width: '100%',
+            pl: '5vw',
+            pr: '2.5vw',
+            mr: '7.5vw'
+        }}>
+          <Box sx={{ pt: 5 }}>
+            <CategoryTitle>Work Experience</CategoryTitle>
+            {
+              experience.work.map((work) => (
+                <Box sx={{ py: 1 }}>
+                  <Typography
+                    variant={ (activeSection === work.key ? 'active' : 'inactive') }
+                    onMouseOver={() => setActiveSection(work.key)}
+                  >
+                  {work.title}<br />{work.location}
+                  </Typography>
+                </Box>
+              ))
+            }
+          </Box>
+          
+          <Box sx={{ py: 5 }}>
+            <CategoryTitle>Eductation</CategoryTitle>
+            {
+              experience.education.map((edu) => (
+                <Box sx={{ py: 1 }}>
+                  <Typography
+                    variant={ (activeSection === edu.key ? 'active' : 'inactive') }
+                    onMouseOver={() => setActiveSection(edu.key)}
+                  >
+                  {edu.title}<br />{edu.location}
+                  </Typography>
+                </Box>
+              ))
+            }
+          </Box>
+          <Box sx={{ pb: 5 }}>
+            <CategoryTitle>Certifications</CategoryTitle>
+            {
+              experience.certifications.map((cert) => (
+                <Box sx={{ py: 1 }}>
+                  <Typography
+                    variant={ (activeSection === cert.key ? 'active' : 'inactive') }
+                    onMouseOver={() => setActiveSection(cert.key)}
+                  >
+                  {cert.title}<br />{cert.location}
+                  </Typography>
+                </Box>
+              ))
+            }
+          </Box>
         </Box>
       </Box>
     </Box>
