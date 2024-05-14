@@ -1,5 +1,6 @@
 import { Box, Slide, styled, Typography } from "@mui/material"
-import React, { useState } from 'react'
+import VisibilitySensor from 'react-visibility-sensor'
+import { useState } from 'react'
 
 const experience = {
   work: [
@@ -238,7 +239,7 @@ const ExperienceSnippet = (props) => {
         left: '5vw',
         top: '150px'
     }}>
-      <Slide direction='right' in={props.active} timeout={2000} unmountOnExit>
+      <Slide direction='right' in={props.active && props.visible} timeout={2000} unmountOnExit>
         <Box 
           component='img'
           src={ '/imgs/experiences/' + props.exp.image }
@@ -249,7 +250,7 @@ const ExperienceSnippet = (props) => {
             pb: 3
         }}/>
       </Slide>
-      <Slide direction='right' in={props.active} timeout={1800} appear={true} unmountOnExit>
+      <Slide direction='right' in={props.active && props.visible} timeout={1800} appear={true} unmountOnExit>
         <Box sx={{ pl: '5vw', '& *': { width: '75%' }}}>        
           { props.exp.snippet ? props.exp.snippet : '' }
         </Box>
@@ -260,6 +261,7 @@ const ExperienceSnippet = (props) => {
 
 export function ExperienceSection() {
   const [activeSection, setActiveSection] = useState(1)
+  const [isVisible, setVisible] = useState(false)
 
   return (
     <Box
@@ -268,14 +270,19 @@ export function ExperienceSection() {
         display: 'flex',
         height: '1000px'
     }}>
-      <Box sx={{
-        width: '50vw',
-        position: 'relative'
-      }}>
-        { experience.education.map((edu) => (<ExperienceSnippet exp={edu} active={activeSection === edu.key} />)) }
-        { experience.work.map((work) => (<ExperienceSnippet exp={work} active={activeSection === work.key} />)) }
-        { experience.certifications.map((cert) => (<ExperienceSnippet exp={cert} active={activeSection === cert.key} />)) }
-      </Box>
+      <VisibilitySensor
+        partialVisibility={true}
+        onChange={(isVisible) => setVisible(isVisible)}
+      >
+        <Box sx={{
+          width: '50vw',
+          position: 'relative'
+        }}>        
+          { experience.education.map((edu) => (<ExperienceSnippet exp={edu} active={activeSection === edu.key} visible={isVisible} />)) }
+          { experience.work.map((work) => (<ExperienceSnippet exp={work} active={activeSection === work.key} visible={isVisible} />)) }
+          { experience.certifications.map((cert) => (<ExperienceSnippet exp={cert} active={activeSection === cert.key} visible={isVisible} />)) }  
+        </Box>
+      </VisibilitySensor>
       <Box
         display='flex'
         alignItems='center'
