@@ -259,9 +259,8 @@ const ExperienceSnippet = (props) => {
   )
 }
 
-export function ExperienceSection() {
-  const [activeSection, setActiveSection] = useState(1)
-  const [isVisible, setVisible] = useState(false)
+export function ExperienceSection(props) {
+  const [activeExp, setActiveExp] = useState(0)
 
   return (
     <Box
@@ -271,16 +270,16 @@ export function ExperienceSection() {
         height: '1000px'
     }}>
       <VisibilitySensor
-        partialVisibility={true}
-        onChange={(isVisible) => setVisible(isVisible)}
+        active={!props.visible}
+        onChange={ (isVisible) => { if (isVisible) props.setCurrentSection(1) }}
       >
         <Box sx={{
           width: '50vw',
           position: 'relative'
         }}>        
-          { experience.education.map((edu) => (<ExperienceSnippet exp={edu} active={activeSection === edu.key} visible={isVisible} />)) }
-          { experience.work.map((work) => (<ExperienceSnippet exp={work} active={activeSection === work.key} visible={isVisible} />)) }
-          { experience.certifications.map((cert) => (<ExperienceSnippet exp={cert} active={activeSection === cert.key} visible={isVisible} />)) }  
+          { experience.education.map((edu) => (<ExperienceSnippet exp={edu} active={activeExp === edu.key} visible={props.visible} />)) }
+          { experience.work.map((work) => (<ExperienceSnippet exp={work} active={activeExp === work.key} visible={props.visible} />)) }
+          { experience.certifications.map((cert) => (<ExperienceSnippet exp={cert} active={activeExp === cert.key} visible={props.visible} />)) }  
         </Box>
       </VisibilitySensor>
       <Box
@@ -299,31 +298,30 @@ export function ExperienceSection() {
             mr: '7.5vw'
         }}>
           <Box sx={{ pt: 5 }}>
-            <CategoryTitle>Work Experience</CategoryTitle>
-            {
-              experience.work.map((work) => (
-                <Box sx={{ py: 1 }}>
-                  <Typography
-                    variant={ (activeSection === work.key ? 'active' : 'inactive') }
-                    onMouseOver={() => setActiveSection(work.key)}
-                  >
-                  {work.title}<br />{work.location}
-                  </Typography>
-                </Box>
-              ))
-            }
-          </Box>
-          
-          <Box sx={{ py: 5 }}>
             <CategoryTitle>Eductation</CategoryTitle>
             {
               experience.education.map((edu) => (
                 <Box sx={{ py: 1 }}>
                   <Typography
-                    variant={ (activeSection === edu.key ? 'active' : 'inactive') }
-                    onMouseOver={() => setActiveSection(edu.key)}
+                    variant={ (activeExp === edu.key ? 'active' : 'inactive') }
+                    onMouseOver={() => setActiveExp(edu.key)}
                   >
                   {edu.title}<br />{edu.location}
+                  </Typography>
+                </Box>
+              ))
+            }
+          </Box>
+          <Box sx={{ py: 5 }}>
+            <CategoryTitle>Work Experience</CategoryTitle>
+            {
+              experience.work.map((work) => (
+                <Box sx={{ py: 1 }}>
+                  <Typography
+                    variant={ (activeExp === work.key ? 'active' : 'inactive') }
+                    onMouseOver={() => setActiveExp(work.key)}
+                  >
+                  {work.title}<br />{work.location}
                   </Typography>
                 </Box>
               ))
@@ -335,8 +333,8 @@ export function ExperienceSection() {
               experience.certifications.map((cert) => (
                 <Box sx={{ py: 1 }}>
                   <Typography
-                    variant={ (activeSection === cert.key ? 'active' : 'inactive') }
-                    onMouseOver={() => setActiveSection(cert.key)}
+                    variant={ (activeExp === cert.key ? 'active' : 'inactive') }
+                    onMouseOver={() => setActiveExp(cert.key)}
                   >
                   {cert.title}<br />{cert.location}
                   </Typography>

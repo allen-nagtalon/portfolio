@@ -1,7 +1,8 @@
-import { Box, Typography } from '@mui/material'
+import { Box } from '@mui/material'
 import ProjectCarousel from '../../components/project-carousel/ProjectCarousel.js'
+import VisibilitySensor from 'react-visibility-sensor'
 
-export function ProjectsSection() {
+export function ProjectsSection(props) {
   const projects = [
     {
       name: 'Wishlist Organizer',
@@ -47,16 +48,21 @@ export function ProjectsSection() {
   ]
 
   return (
-    <Box
-      id='projects-section'
-      bgcolor='silver.light'
-      sx={{
-        height: '650px',
-        mt: '150px',
-        px: '5vw',
-        py: '150px'
-    }}>
-      <ProjectCarousel projects={projects} />
-    </Box>
+    <VisibilitySensor
+      active={!props.visible}
+      onChange={ (isVisible) => { if (isVisible) props.setCurrentSection(2) }}
+    >
+      <Box
+        id='projects-section'
+        bgcolor='silver.light'
+        sx={{
+          height: '650px',
+          mt: '150px',
+          px: '5vw',
+          py: '150px'
+      }}>
+        <ProjectCarousel projects={projects} />
+      </Box>
+    </VisibilitySensor>
   )
 }

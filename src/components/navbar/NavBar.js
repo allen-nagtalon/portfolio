@@ -26,38 +26,46 @@ const Logo = _ => {
   )
 }
 
-const NavBar = _ => {
+const NavBar = (props) => {
   return (
     <AppBar component='nav' color='melon' elevation={0} sx={{ paddingLeft: 5 }}>
       <Toolbar>
         <Box display='flex' alignItems='center' justifyContent='space-between' sx={{ height: 120, width: '100%' }}>
           <Logo />
           <Box display='flex'>
-            {navItems.map((page) => (
-              <Typography 
-                component={Button}
-                href={ '#' + page.toLowerCase() + '-section' }
-                variant='body2'
-                disableRipple
-                color='dark.main'
-                sx={{
-                  height: 60,
-                  width: 180,
-                  textTransform: 'none',
-                  borderTop: 1,
-                  borderRadius: 0,
-                  mr: '10px',
-                  py: '20px',
-                  '&:hover': {
-                    borderTop: 4,
-                    backgroundColor: 'transparent',
-                    pt: '17px',
-                    fontWeight: 'bold'
-                  }
-              }}>
-                {page}
-              </Typography>
-            ))}
+            {
+              navItems.map((page, i) => (
+                <Typography 
+                  component={Button}
+                  href={ '#' + page.toLowerCase() + '-section' }
+                  variant='body2'
+                  disableRipple
+                  color='dark.main'
+                  sx={{
+                    height: 60,
+                    width: 180,
+                    mr: '10px',
+                    py: '20px',
+                    textTransform: 'none',
+                    borderRadius: 0,
+                    borderTop: 1,
+                    '&:hover': {
+                      borderTop: 4,
+                      backgroundColor: 'transparent',
+                      pt: '17px',
+                      fontWeight: 'bold'
+                    },
+                    ...(props.currentSection == i && {
+                      borderTop: 4,
+                      pt: '17px',
+                      fontWeight: 'bold'
+                    })
+                }}>
+                  {console.log(props.currentSection)}
+                  {page}
+                </Typography>
+              ))
+            }
           </Box>
         </Box>
       </Toolbar>

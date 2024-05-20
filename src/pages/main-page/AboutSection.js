@@ -1,14 +1,11 @@
 import { Box, Fade, Slide, Typography } from "@mui/material"
 import VisibilitySensor from 'react-visibility-sensor'
-import { useState } from 'react'
 
-export function AboutSection() {
-  const [isVisible, setVisible] = useState(false)
-
+export function AboutSection(props) {
   return (
     <VisibilitySensor
-      partialVisibility={true}
-      onChange={(isVisible) => setVisible(isVisible)}
+      active={!props.visible}
+      onChange={ (isVisible) => { if (isVisible) props.setCurrentSection(0) }}
     >
       <Box
         id='about-section'
@@ -44,7 +41,7 @@ export function AboutSection() {
                 pr: 7,
                 zIndex: 2
             }}/>
-            <Slide direction='left' in={isVisible} timeout={1600}>
+            <Slide direction='left' in={props.visible} timeout={1600}>
               <Box
                 component='img'
                 src='/imgs/side-profile.jpg'
@@ -68,12 +65,12 @@ export function AboutSection() {
                 pr: 7,
                 zIndex: 4
             }}>
-              <Fade in={isVisible} timeout={2600}>
+              <Fade in={props.visible} timeout={2600}>
                 <Typography variant='body1'>
                   <p>Hello,<br/>My name is Allen!</p>
                 </Typography>
               </Fade>
-              <Fade in={isVisible} timeout={2600}>
+              <Fade in={props.visible} timeout={2600}>
                 <Typography variant='body2' color='silver.dark'>
                   <p>I am a Software Developer!</p>
                   <p>My areas of interest include back-end development, machine learning, and general problem solving.</p>
