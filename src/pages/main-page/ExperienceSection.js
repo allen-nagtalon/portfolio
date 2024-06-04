@@ -270,8 +270,8 @@ export function ExperienceSection(props) {
         height: '1000px'
     }}>
       <VisibilitySensor
-        active={!props.visible}
-        onChange={ (isVisible) => { if (isVisible) props.setCurrentSection(1) }}
+        partialVisibility={true}
+        onChange={ (isVisible) => { props.setVisible(isVisible) }}
       >
         <Box sx={{
           width: '50vw',

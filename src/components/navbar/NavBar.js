@@ -33,39 +33,122 @@ const NavBar = (props) => {
         <Box display='flex' alignItems='center' justifyContent='space-between' sx={{ height: 120, width: '100%' }}>
           <Logo />
           <Box display='flex'>
-            {
-              navItems.map((page, i) => (
-                <Typography 
-                  component={Button}
-                  href={ '#' + page.toLowerCase() + '-section' }
-                  variant='body2'
-                  disableRipple
-                  color='dark.main'
-                  sx={{
-                    height: 60,
-                    width: 180,
-                    mr: '10px',
-                    py: '20px',
-                    textTransform: 'none',
-                    borderRadius: 0,
-                    borderTop: 1,
-                    '&:hover': {
-                      borderTop: 4,
-                      backgroundColor: 'transparent',
-                      pt: '17px',
-                      fontWeight: 'bold'
-                    },
-                    ...(props.currentSection == i && {
-                      borderTop: 4,
-                      pt: '17px',
-                      fontWeight: 'bold'
-                    })
-                }}>
-                  {console.log(props.currentSection)}
-                  {page}
-                </Typography>
-              ))
-            }
+            <Typography
+              component={Button}
+              variant='body2'
+              disableRipple
+              href='#about-section'
+              color='dark.main'
+              sx={{
+                height: 60,
+                width: 180,
+                mr: '10px',
+                py: '20px',
+                textTransform: 'none',
+                borderRadius: 0,
+                borderTop: 1,
+                '&:hover': {
+                  borderTop: 4,
+                  backgroundColor: 'transparent',
+                  pt: '17px',
+                  fontWeight: 'bold'
+                },
+                ...(props.aboutVisible && {
+                  borderTop: 4,
+                  pt: '17px',
+                  fontWeight: 'bold'
+                })
+              }}
+            >
+              About
+            </Typography>
+            <Typography
+              component={Button}
+              variant='body2'
+              disableRipple
+              href='#experience-section'
+              color='dark.main'
+              sx={{
+                height: 60,
+                width: 180,
+                mr: '10px',
+                py: '20px',
+                textTransform: 'none',
+                borderRadius: 0,
+                borderTop: 1,
+                '&:hover': {
+                  borderTop: 4,
+                  backgroundColor: 'transparent',
+                  pt: '17px',
+                  fontWeight: 'bold'
+                },
+                ...(props.expVisible && {
+                  borderTop: 4,
+                  pt: '17px',
+                  fontWeight: 'bold'
+                })
+              }}
+            >
+              Experience
+            </Typography>
+            <Typography
+              component={Button}
+              variant='body2'
+              disableRipple
+              href='#projects-section'
+              color='dark.main'
+              sx={{
+                height: 60,
+                width: 180,
+                mr: '10px',
+                py: '20px',
+                textTransform: 'none',
+                borderRadius: 0,
+                borderTop: 1,
+                '&:hover': {
+                  borderTop: 4,
+                  backgroundColor: 'transparent',
+                  pt: '17px',
+                  fontWeight: 'bold'
+                },
+                ...(props.projectsVisible && {
+                  borderTop: 4,
+                  pt: '17px',
+                  fontWeight: 'bold'
+                })
+              }}
+            >
+              Projects
+            </Typography>
+            <Typography
+              component={Button}
+              variant='body2'
+              disableRipple
+              href='#contact-section'
+              color='dark.main'
+              sx={{
+                height: 60,
+                width: 180,
+                mr: '10px',
+                py: '20px',
+                textTransform: 'none',
+                borderRadius: 0,
+                borderTop: 1,
+                '&:hover': {
+                  borderTop: 4,
+                  backgroundColor: 'transparent',
+                  pt: '17px',
+                  fontWeight: 'bold'
+                },
+                ...(props.contactVisible && {
+                  borderTop: 4,
+                  pt: '17px',
+                  fontWeight: 'bold'
+                })
+              }}
+            >
+              Contact
+            </Typography>
           </Box>
         </Box>
       </Toolbar>

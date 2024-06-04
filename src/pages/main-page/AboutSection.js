@@ -4,8 +4,8 @@ import VisibilitySensor from 'react-visibility-sensor'
 export function AboutSection(props) {
   return (
     <VisibilitySensor
-      active={!props.visible}
-      onChange={ (isVisible) => { if (isVisible) props.setCurrentSection(0) }}
+      partialVisibility={true}
+      onChange={ (isVisible) => { props.setVisible(isVisible) }}
     >
       <Box
         id='about-section'

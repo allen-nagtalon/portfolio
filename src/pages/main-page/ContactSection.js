@@ -8,8 +8,8 @@ import VisibilitySensor from 'react-visibility-sensor'
 export function ContactSection(props) {
   return (
     <VisibilitySensor
-      active={!props.visible}
-      onChange={ (isVisible) => { if (isVisible) props.setCurrentSection(3) }}
+      partialVisibility={true}
+      onChange={ (isVisible) => { props.setVisible(isVisible) }}
     >
       <Box id='contact-section' sx={{ height: 'auto', px: '10vw', py: '150px' }}>
         <Grid container>

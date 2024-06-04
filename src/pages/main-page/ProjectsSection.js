@@ -49,8 +49,8 @@ export function ProjectsSection(props) {
 
   return (
     <VisibilitySensor
-      active={!props.visible}
-      onChange={ (isVisible) => { if (isVisible) props.setCurrentSection(2) }}
+      partialVisibility={true}
+      onChange={ (isVisible) => { props.setVisible(isVisible) }}
     >
       <Box
         id='projects-section'

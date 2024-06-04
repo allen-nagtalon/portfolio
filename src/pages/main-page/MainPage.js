@@ -8,16 +8,24 @@ import { ContactSection } from "./ContactSection.js"
 import { useState } from 'react'
 
 const MainPage = _ => {
-  const [currentSection, setCurrentSection] = useState(0)
+  const [aboutVisible, setAboutVisible] = useState(false)
+  const [expVisible, setExpVisible] = useState(false)
+  const [projectsVisible, setProjectsVisible] = useState(false)
+  const [contactVisible, setContactVisible] = useState(false)
 
   return (
     <>
-      <NavBar currentSection={currentSection} />
+      <NavBar 
+        aboutVisible={aboutVisible}
+        expVisible={expVisible}
+        projectsVisible={projectsVisible}
+        contactVisible={contactVisible}
+      />
       <Box sx={{ height: 120 }} />
-      <AboutSection visible={currentSection === 0} setCurrentSection={setCurrentSection} />
-      <ExperienceSection visible={currentSection === 1} setCurrentSection={setCurrentSection} />
-      <ProjectsSection visible={currentSection === 2} setCurrentSection={setCurrentSection} />
-      <ContactSection visible={currentSection === 3} setCurrentSection={setCurrentSection} />
+      <AboutSection visible={aboutVisible} setVisible={setAboutVisible} />
+      <ExperienceSection visible={expVisible} setVisible={setExpVisible} />
+      <ProjectsSection visible={projectsVisible} setVisible={setProjectsVisible} />
+      <ContactSection visible={contactVisible} setVisible={setContactVisible} />
       <Footer />
     </>
   )
